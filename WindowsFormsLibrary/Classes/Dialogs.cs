@@ -2,6 +2,8 @@
 using WindowsFormsLibrary.LanguageExtensions;
 using static System.DateTime;
 using Timer = System.Windows.Forms.Timer;
+// ReSharper disable PossibleNullReferenceException
+// ReSharper disable LocalizableElement
 
 
 namespace WindowsFormsLibrary.Classes;
@@ -250,10 +252,11 @@ public class Dialogs
     /// <param name="owner">control or form</param>
     /// <param name="heading">text for dialog heading</param>
     /// <param name="yesAction"></param>
+    /// <param name="noAction"></param>
     /// <returns>true for yes button, false for no button</returns>
     /// <remarks>
     /// Dialogs.Question(this, "Ask something", YesMethod, NoMethod);
-    ///
+    /// 
     /// Last two parameters are the actions to perform
     /// </remarks>
     public static void Question(Control owner, string heading, Action yesAction, Action noAction)
