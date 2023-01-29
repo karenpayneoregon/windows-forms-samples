@@ -48,7 +48,7 @@ public class DataButton : Button
 }
 ```
 
-# Data operations
+## Data operations
 
 All data operations are done in `DataOperations` class.
 
@@ -56,7 +56,7 @@ All data operations are done in `DataOperations` class.
 - **ReadProducts** is used to return all products for a category by passing a category identifier to this method.
     - The caller, in the form uses a `List<Product>` set to a `BindingList<Product>` which is used in OnDoubleClick of the ListBox to show some product details.
 
-# Button operations
+## Button operations
 
 All button operations are done in `Operations` class.
 
@@ -131,7 +131,7 @@ public static void BuildButtons()
 }
 ```
 
-# Form code
+## Form code
 
 The following components are used to work with products. Novice developers usually don't understand [BindingList](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.bindinglist-1?view=net-7.0) and [BindingSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.bindingsource?view=windowsdesktop-6.0) and instead work with form controls. Anytime we can get away with not touching controls is best as done with a BindingSource and BindingList.
 
@@ -195,7 +195,7 @@ private void ProductsListBoxOnDoubleClick(object sender, EventArgs e)
 }
 ```
 
-# Summary
+## Summary
 
 By following the code presented it is easy to create dynamic buttons.
 

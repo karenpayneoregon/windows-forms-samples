@@ -37,14 +37,15 @@ public partial class Form1 : Form
     /// </summary>
     private void AskQuestionButton_Click(object sender, EventArgs e)
     {
+        var (yesNo, verify) = Dialogs.Question(this, "Do you like coffee?");
         // center on this form
-        if (Dialogs.Question(this, "Do you like coffee?"))
+        if (yesNo)
         {
-            MessageBox.Show("Yes");
+            MessageBox.Show($"Selected Yes Verify: {verify.ToYesNoString()}");
         }
         else
         {
-            MessageBox.Show("No");
+            MessageBox.Show($"Selected No Verify: {verify.ToYesNoString()}");
         }
     }
 
